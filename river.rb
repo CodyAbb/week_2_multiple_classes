@@ -11,4 +11,13 @@ class River
     return @fish.length
   end
 
+  def add_fish(fish)
+    @fish << fish
+  end
+
+  def move_fish_from_river(bear, fish)
+    @fish.delete(fish)
+    bear.eat_fish(fish)
+  end
+
 end
